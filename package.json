@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/utils-map-reduce",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Perform a single-pass map-reduce operation against each element in an array and return the accumulated result.",
   "license": "Apache-2.0",
   "author": {
