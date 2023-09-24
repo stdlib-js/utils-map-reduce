@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import mapReduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-map-reduce@deno/mod.js';
+import mapReduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-map-reduce@v0.1.0-deno/mod.js';
 ```
 
 #### mapReduce( arr, initial, mapper, reducer\[, thisArg ] )
@@ -198,7 +198,7 @@ import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-funct
 import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-add@deno/mod.js';
 import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
 import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
-import mapReduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-map-reduce@deno/mod.js';
+import mapReduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-map-reduce@v0.1.0-deno/mod.js';
 
 function fill( i ) {
     var rand = discreteUniform( -10*(i+1), 10*(i+1) );
