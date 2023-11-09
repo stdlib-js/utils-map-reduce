@@ -45,38 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-map-reduce
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-mapReduce = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-map-reduce@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var mapReduce = require( 'path/to/vendor/umd/utils-map-reduce/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-map-reduce@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.mapReduce;
-})();
-</script>
+var mapReduce = require( '@stdlib/utils-map-reduce' );
 ```
 
 #### mapReduce( arr, initial, mapper, reducer\[, thisArg ] )
@@ -215,14 +207,9 @@ var mean = out / ctx.count;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var naryFunction = require( '@stdlib/utils-nary-function' );
 var add = require( '@stdlib/math-base-ops-add' );
 var abs = require( '@stdlib/math-base-special-abs' );
@@ -253,11 +240,6 @@ console.log( 'x:' );
 console.log( x.data );
 
 console.log( 'sum: %d', out );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -275,6 +257,14 @@ console.log( 'sum: %d', out );
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
 <section class="related">
+
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/utils-map`][@stdlib/utils/map]</span><span class="delimiter">: </span><span class="description">apply a function to each element in an array and assign the result to an element in an output array.</span>
+-   <span class="package-name">[`@stdlib/utils-map-reduce-right`][@stdlib/utils/map-reduce-right]</span><span class="delimiter">: </span><span class="description">perform a single-pass map-reduce operation against each element in an array while iterating from right to left and return the accumulated result.</span>
+-   <span class="package-name">[`@stdlib/utils-reduce`][@stdlib/utils/reduce]</span><span class="delimiter">: </span><span class="description">apply a function against an accumulator and each element in an array and return the accumulated result.</span>
 
 </section>
 
@@ -349,11 +339,21 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-map-reduce/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib/tree/umd
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/stdlib/tree/umd
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/stdlib/tree/umd
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
+
+<!-- <related-links> -->
+
+[@stdlib/utils/map]: https://github.com/stdlib-js/utils-map
+
+[@stdlib/utils/map-reduce-right]: https://github.com/stdlib-js/utils-map-reduce-right
+
+[@stdlib/utils/reduce]: https://github.com/stdlib-js/utils-reduce
+
+<!-- </related-links> -->
 
 </section>
 
