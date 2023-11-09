@@ -258,6 +258,14 @@ console.log( 'sum: %d', out );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/utils-map`][@stdlib/utils/map]</span><span class="delimiter">: </span><span class="description">apply a function to each element in an array and assign the result to an element in an output array.</span>
+-   <span class="package-name">[`@stdlib/utils-map-reduce-right`][@stdlib/utils/map-reduce-right]</span><span class="delimiter">: </span><span class="description">perform a single-pass map-reduce operation against each element in an array while iterating from right to left and return the accumulated result.</span>
+-   <span class="package-name">[`@stdlib/utils-reduce`][@stdlib/utils/reduce]</span><span class="delimiter">: </span><span class="description">apply a function against an accumulator and each element in an array and return the accumulated result.</span>
+
 </section>
 
 <!-- /.related -->
@@ -331,11 +339,21 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-map-reduce/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/stdlib
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/stdlib
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
+
+<!-- <related-links> -->
+
+[@stdlib/utils/map]: https://github.com/stdlib-js/utils-map
+
+[@stdlib/utils/map-reduce-right]: https://github.com/stdlib-js/utils-map-reduce-right
+
+[@stdlib/utils/reduce]: https://github.com/stdlib-js/utils-reduce
+
+<!-- </related-links> -->
 
 </section>
 
