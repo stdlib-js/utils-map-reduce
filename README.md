@@ -45,30 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/utils-map-reduce
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var mapReduce = require( '@stdlib/utils-map-reduce' );
+mapReduce = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-map-reduce@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var mapReduce = require( 'path/to/vendor/umd/utils-map-reduce/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-map-reduce@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.mapReduce;
+})();
+</script>
 ```
 
 #### mapReduce( arr, initial, mapper, reducer\[, thisArg ] )
@@ -207,9 +215,14 @@ var mean = out / ctx.count;
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var filledarrayBy = require( '@stdlib/array-filled-by' );
-var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {.factory;
 var naryFunction = require( '@stdlib/utils-nary-function' );
 var add = require( '@stdlib/math-base-ops-add' );
 var abs = require( '@stdlib/math-base-special-abs' );
@@ -240,6 +253,11 @@ console.log( 'x:' );
 console.log( x.data );
 
 console.log( 'sum: %d', out );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -339,19 +357,19 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-map-reduce/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/umd
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/utils/map]: https://github.com/stdlib-js/utils-map
+[@stdlib/utils/map]: https://github.com/stdlib-js/utils-map/tree/umd
 
-[@stdlib/utils/map-reduce-right]: https://github.com/stdlib-js/utils-map-reduce-right
+[@stdlib/utils/map-reduce-right]: https://github.com/stdlib-js/utils-map-reduce-right/tree/umd
 
-[@stdlib/utils/reduce]: https://github.com/stdlib-js/utils-reduce
+[@stdlib/utils/reduce]: https://github.com/stdlib-js/utils-reduce/tree/umd
 
 <!-- </related-links> -->
 
