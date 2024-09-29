@@ -45,14 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-map-reduce
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import mapReduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-map-reduce@deno/mod.js';
+var mapReduce = require( '@stdlib/utils-map-reduce' );
 ```
 
 #### mapReduce( arr, initial, mapper, reducer\[, thisArg ] )
@@ -77,7 +95,7 @@ var out = mapReduce( arr, 0, square, sum );
 The function accepts both array-like objects and [`ndarray`][@stdlib/ndarray/ctor]-like objects.
 
 ```javascript
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
+var array = require( '@stdlib/ndarray-array' );
 
 function square( value ) {
     return value * value;
@@ -149,11 +167,11 @@ var mean = out / ctx.count;
 -   The function supports array-like objects exposing getters and setters for array element access (e.g., [`Complex64Array`][@stdlib/array/complex64], [`Complex128Array`][@stdlib/array/complex128], etc).
 
     ```javascript
-    import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
-    import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@deno/mod.js';
-    import cceil from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cceil@deno/mod.js';
-    import realf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-real@deno/mod.js';
-    import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-imag@deno/mod.js';
+    var Complex64Array = require( '@stdlib/array-complex64' );
+    var Complex64 = require( '@stdlib/complex-float32-ctor' );
+    var cceil = require( '@stdlib/math-base-special-cceil' );
+    var realf = require( '@stdlib/complex-float32-real' );
+    var imagf = require( '@stdlib/complex-float32-imag' );
 
     function sum( acc, z ) {
         var re1 = realf( acc );
@@ -192,13 +210,13 @@ var mean = out / ctx.count;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@deno/mod.js';
-import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-add@deno/mod.js';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
-import mapReduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-map-reduce@deno/mod.js';
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+var naryFunction = require( '@stdlib/utils-nary-function' );
+var add = require( '@stdlib/math-base-ops-add' );
+var abs = require( '@stdlib/math-base-special-abs' );
+var array = require( '@stdlib/ndarray-array' );
+var mapReduce = require( '@stdlib/utils-map-reduce' );
 
 function fill( i ) {
     var rand = discreteUniform( -10*(i+1), 10*(i+1) );
@@ -263,7 +281,7 @@ console.log( 'sum: %d', out );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -326,19 +344,19 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-map-reduce/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/deno
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/deno
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128/tree/deno
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
 <!-- <related-links> -->
 
-[@stdlib/utils/map]: https://github.com/stdlib-js/utils-map/tree/deno
+[@stdlib/utils/map]: https://github.com/stdlib-js/utils-map
 
-[@stdlib/utils/map-reduce-right]: https://github.com/stdlib-js/utils-map-reduce-right/tree/deno
+[@stdlib/utils/map-reduce-right]: https://github.com/stdlib-js/utils-map-reduce-right
 
-[@stdlib/utils/reduce]: https://github.com/stdlib-js/utils-reduce/tree/deno
+[@stdlib/utils/reduce]: https://github.com/stdlib-js/utils-reduce
 
 <!-- </related-links> -->
 
