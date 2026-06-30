@@ -1,4 +1,4 @@
-"use strict";var y=function(r,e){return function(){return e||r((e={exports:{}}).exports,e),e.exports}};var h=y(function(H,g){
+"use strict";var y=function(r,e){return function(){try{return e||r((e={exports:{}}).exports,e),e.exports}catch(a){throw (e=0, a)}};};var h=y(function(H,g){
 var T=require('@stdlib/ndarray-base-vind2bind/dist'),p="throw";function x(r,e,a,t,s){var n,v,i,u,f,c,l,m,d,q,o;if(u=r.length,l=r.shape,n=r.data,m=r.strides,d=r.offset,v=r.order,f=r.accessors[0],c=r.ref,l.length===0)return t.call(s,e,a(f(n,d),0,c),0,c);for(i=e,o=0;o<u;o++)q=T(l,m,d,v,o,p),i=t.call(s,i,a(f(n,q),o,c),o,c);return i}g.exports=x
 });var k=y(function(I,w){
 function R(r,e,a,t,s){var n,v,i,u;for(n=r.data,v=r.accessors[0],i=e,u=0;u<n.length;u++)i=t.call(s,i,a(v(n,u),u,n),u,n);return i}w.exports=R
